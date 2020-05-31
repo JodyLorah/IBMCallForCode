@@ -1,4 +1,4 @@
-package com.example.globepage.ui.notifications;
+package com.example.globepage.ui.charities;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.globepage.R;
 
-public class NotificationsFragment extends Fragment {
+public class CharitiesFragment extends Fragment {
 
-    private NotificationsViewModel notificationsViewModel;
+    private CharitiesViewModel charitiesViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        notificationsViewModel =
-                ViewModelProviders.of(this).get(NotificationsViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_notifications, container, false);
-        final TextView textView = root.findViewById(R.id.text_notifications);
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        charitiesViewModel =
+                ViewModelProviders.of(this).get(CharitiesViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_charities, container, false);
+        final TextView textView = root.findViewById(R.id.text_charities);
+        charitiesViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
