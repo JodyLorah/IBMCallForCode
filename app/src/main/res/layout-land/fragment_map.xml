@@ -2,93 +2,73 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="?attr/actionBarSize">
+    tools:context=".ui.map.MapFragment">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_bar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="?android:attr/windowBackground"
-        app:elevation="8dp"
-        app:itemIconSize="@dimen/bottom_navigation_icon_size"
-        app:itemIconTint="@color/colorPrimaryDark"
-        app:itemTextColor="@color/colorPrimaryDark"
-        app:labelVisibilityMode="unlabeled"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-
-        >
-
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <ImageButton
         android:id="@+id/imageButtonDashboard"
-        android:layout_width="105dp"
-        android:layout_height="85dp"
-        android:background="#00BCD4"
-        android:tint="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:menu="@menu/bottom_nav_menu"
-        app:srcCompat="@drawable/ic_dashboard_blue" />
-
-    <ImageButton
-        android:id="@+id/imageButtonCharities"
-        android:layout_width="102dp"
-        android:layout_height="85dp"
-        android:adjustViewBounds="true"
-        android:background="#00BCD4"
-        android:padding="10dp"
-        android:scaleType="fitCenter"
-        android:tint="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.339"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:menu="@menu/bottom_nav_menu"
-        app:srcCompat="@drawable/ic_charities_blue" />
-
-    <ImageButton
-        android:id="@+id/imageButtonMap"
-        android:layout_width="102dp"
-        android:layout_height="85dp"
-        android:background="#00BCD4"
-        android:tint="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.669"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:menu="@menu/bottom_nav_menu"
-        app:srcCompat="@drawable/ic_map_blue" />
-
-    <ImageButton
-        android:id="@+id/imageButtonProfile"
-        android:layout_width="102dp"
-        android:layout_height="85dp"
+        android:layout_width="85dp"
+        android:layout_height="103dp"
         android:background="#00BCD4"
         android:tint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
         app:menu="@menu/bottom_nav_menu"
-        app:srcCompat="@drawable/profile"
-        android:adjustViewBounds="true"
-        android:padding="10dp"
-        android:scaleType="fitCenter"/>
+        app:srcCompat="@drawable/ic_dashboard_blue" />
 
+    <ImageButton
+        android:id="@+id/imageButtonCharities"
+        android:layout_width="85dp"
+        android:layout_height="103dp"
+        android:adjustViewBounds="true"
+        android:background="#00BCD4"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:tint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.668"
+        app:menu="@menu/bottom_nav_menu"
+        app:srcCompat="@drawable/ic_charities_blue" />
+
+    <ImageButton
+        android:id="@+id/imageButtonMap"
+        android:layout_width="85dp"
+        android:layout_height="103dp"
+        android:background="#048697"
+        android:tint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.334"
+        app:menu="@menu/bottom_nav_menu"
+        app:srcCompat="@drawable/ic_map_blue" />
+
+    <ImageButton
+        android:id="@+id/imageButtonProfile"
+        android:layout_width="85dp"
+        android:layout_height="104dp"
+        android:adjustViewBounds="true"
+        android:background="#00BCD4"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:tint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:menu="@menu/bottom_nav_menu"
+        app:srcCompat="@drawable/profile" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
